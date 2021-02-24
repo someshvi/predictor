@@ -1,0 +1,522 @@
+*{
+margin:0; padding:0;
+box-sizing:border-box;
+
+}
+
+html,body {
+    max-width: 100%;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+
+}
+.banner_img {
+  background-image:url('../images/header_img.png');
+  height:400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width:auto;
+  margin: 0px;
+  padding: 0px;
+  background-position: center;
+  display:block;
+}
+
+.logo_right {
+ max-width: 115px;
+ margin-right:13%;
+ margin-top:1.5%;
+}
+
+
+.logo_left{
+    max-width: 135px;
+    margin-left:13%;
+    margin-top:1.5%;
+}
+
+
+.info_container{
+margin-top:2%;
+
+
+}
+
+
+h1{
+   margin-left:13.5%;
+   margin-top:10.5%;
+   font-size:320%;
+}
+
+h6{
+   margin-left:13.5%;
+   font-size:116%;
+   font-family: "Nunito Sans";
+}
+
+.img_hub_text {
+    margin-left:;
+    margin-right:;
+    font-size:110%;
+
+}
+
+.datepicker
+{
+  width: 35%;
+  height:35%;
+}
+
+
+input-text{
+text-align:right;
+}
+
+
+input {
+    background: #1e90ff33;
+    border: 0;
+}
+
+.tab-content {
+    border: 1px solid #808080;
+    border:rounded;
+}
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+    background: #003eff;
+    color: white;
+}
+
+.form-control {
+    background-color: #529cff38;
+    font-weight: 700;
+}
+
+.container {
+    min-width: -webkit-fill-available;
+}
+
+.form-row {
+    padding: 2%;
+}
+
+.container .img_hub {
+    width: 4%;
+    margin:0%;
+    padding:0%;
+}
+
+.row input {
+    margin-right: 7px;
+}
+
+.btn-group .btn {
+    margin-right: 10px;
+    border: 0.5px solid #dadada;
+    border-radius: 1px;
+    background-color: white;
+    color: black;
+}
+
+.nxtbtn {
+    background: #0033ff;
+    color: white;
+    font-weight: 700;
+}
+
+progress {
+    width: 16%;
+    height: 4px;
+    color:gry;
+    margin:0%;
+    padding:0%;
+}
+
+.progress-bar {
+    width: 15%;
+    margin-right: 2px;
+    height: 7px;
+}
+
+.border {
+    padding: 10px;
+}
+
+.shadow-lg {
+    box-shadow: 0 1rem 3rem #0417619c!important;
+    min-height: 210px;
+}
+.space {
+            margin-left:9.8%;
+            margin-right:12%;
+        }
+
+
+
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+/* Styles */
+
+
+    html,body {
+        max-width: 100%;
+        overflow-x: hidden;
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+
+
+    }
+
+    .banner_img
+        {
+        background-image: url('../images/header_img.png');
+        left:0;
+        right:0;
+        width:auto;
+        height:111px;
+        margin: 0px;
+        padding: 0px;
+    }
+
+
+    .logo_left{
+    max-width: 12%;
+    margin-left:13%;
+    margin-top:1.5%;
+    }
+
+    .logo_right {
+     max-width: 10%;
+     margin-right:11%;
+     margin-top:1.8%;
+    }
+
+
+    h1{
+       margin-left:13%;
+       margin-top:11%;
+       font-size:78%;
+    }
+
+    h6{
+        margin-left:13%;
+        font-size:5px;
+        font-family: "Nunito Sans";
+    }
+
+
+    .img_hub {
+        width: 5%;
+        margin:0%;
+        padding:0%;
+    }
+
+    .img_hub_text {
+    margin-left:-14%;
+    margin-right:7%;
+    font-size:4%;
+
+    }
+    .container .img_hub {
+    width:6%;
+    margin:0%;
+    padding:0%;
+}
+
+    .progress {
+        width:1px;
+        height:1px;
+        color:gry;
+        margin:0%;
+        padding:0%;
+
+    }
+}
+
+
+/* iPads (portrait) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+/* Styles */
+
+
+
+
+    html,body {
+        max-width: 100%;
+        overflow-x: hidden;
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+
+
+    }
+
+    .banner_img
+        {
+        background-image: url('../images/header_img.png');
+        left:0;
+        right:0;
+        width:auto;
+        height:231px;
+        margin: 0px;
+        padding: 0px;
+    }
+
+
+
+    h1{
+       margin-left:13.5%;
+       margin-top:11%;
+       font-size:170%;
+    }
+
+    h6{
+       margin-left:13.5%;
+       font-size:63%;
+       font-family: "Nunito Sans";
+    }
+
+    .logo_left{
+    max-width: 12%;
+    margin-left:13%;
+    margin-top:1.5%;
+    }
+
+    .logo_right {
+     max-width: 10%;
+     margin-right:10%;
+     margin-top:1.8%;
+    }
+
+    .img_hub {
+        width: 5%;
+        margin:0%;
+        padding:0%;
+    }
+
+    .img_hub_text {
+        margin-left:-6%;
+        margin-right:12%;
+        font-size:55%;
+    }
+    .container .img_hub {
+    width:5%;
+    margin:0%;
+    padding:0%;
+    }
+    .container_text_size{
+    font-size:5px;
+    }
+
+    container_input{
+    width:2px;
+    }
+}
+
+
+
+
+
+
+
+
+/*
+@media screen and (max-width:439px) {
+    .head {
+        font-size: xx-large;
+    }
+    .logos {
+        max-width: 123px;
+    }
+
+
+}
+
+.logos {
+    max-width: 150px;
+}
+
+.sub_head {
+    margin-left:12%;
+    margin-top:12%;
+
+}
+
+
+.col-md-3 {
+    text-align: initial;
+}
+
+
+
+
+
+
+/*
+@media only screen and (max-width:768px)
+{
+
+    .body {
+    max-width: 100%;
+    overflow-x: hidden;
+    }
+
+    .header_img
+        {
+        background-image: url('../images/header_img.png');
+        left:0;
+        right:0;
+        width:100%;
+        height:289px;
+        margin: 0px;
+        padding: 0px;
+        }
+
+        .space {
+            padding-top:1%;
+            margin-left:1%;
+            margin-right:2%;
+        }
+
+         .somke_margin{
+       margin-left: 1rem!important;
+       }
+
+
+       .dob_font{
+        font-size:12px;
+       }
+
+
+       .somke_font{
+       font-size:12px;
+       padding-top:25%;
+       margin-left:-15px;
+       }
+
+       .info_container{
+        padding-top:1%;
+       }
+
+       .banner_h6{
+       margin-left:13.5%;
+       font-size:116%;
+       font-family: "Nunito Sans";
+    }
+       h1{
+          font-size:29px;
+    }
+}
+
+@media only screen and (max-width:576px)
+{
+
+    html,body {
+        max-width: 100%;
+        overflow-x: hidden;
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+
+
+    }
+
+        .header_img
+        {
+        background-image: url('../images/header_img.png');
+        left:0;
+        right:0;
+        width:100%;
+        height:110px;
+        margin: 0px;
+        padding: 0px;
+        }
+
+       .banner_p{
+            padding-top:0.1%;
+            padding-left:1%;
+            padding-right:11%;
+            font-size:9%;
+            font-family:"initial";
+            }
+
+
+       .logo_right {
+         max-width: 26px;
+         margin-right:11%;
+         margin-top:1.5%;
+        }
+
+
+       .logo_left{
+            max-width: 35px;
+            margin-left:13%;
+            margin-top:1.5%;
+        }
+
+       h1{
+          font-size:13px;
+       }
+
+       .banner_h6{
+          font-size:4px;
+       }
+
+       .pt-5{
+           padding-top: 0rem!important;
+        }
+
+        .row {
+          margin-right: 0px;
+
+        }
+       .progress {
+            width: 20%;
+            height: 4px;
+            color:gry;
+            margin:0%;
+            padding:0%;
+        }
+
+       .container .img_hub {
+         width: 7%;
+         margin:0%;
+         padding:0%;
+        }
+
+       .font_size{
+       font-size :4px;
+       }
+
+       .space {
+
+            margin-left:3%;
+
+       }
+
+       .space_top{
+       margin-top:-20%;
+       }
+
+       .btn_new_pre{
+       size:5%;
+       }
+
+}

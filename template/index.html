@@ -1,0 +1,487 @@
+<!doctype html>
+
+
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css"
+          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../static/css/style.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="..static/js/bootstrap.min.js"></script>
+
+    <title>Hello, world!</title>
+    <style>
+
+
+    </style>
+</head>
+
+<body>
+
+
+<div class="row">
+
+    <div class="col-sm-12 banner_img container-fluid">
+
+        <div>
+            <img class="img logo_right" src="../static/images/Group 2@2x.png" align="right">
+            <img class="img logo_left" src="../static/images/logo-temp@2x.png" align="left">
+        </div>
+
+        <div>
+            <h1 class="text-white">Covid Risk Score Predictor</h1>
+            <h6 class="text-white">Would you like to know how much risk you have of getting
+                sick with <br> COVID-19? Answer the questions below and in a few seconds we <br>
+                will calculate your risk.</h6>
+        </div>
+
+    </div>
+</div>
+
+<div class="container " align="center" style=" margin-top: 1%;">
+    <div class="">
+        <img class="img_hub" id="vector1" src="../static/images/ic-demographics@2x.png" align="center">
+        <progress id="pgrs1" value="0" max="1"></progress>
+        <img class="ic_container img_hub" id="vector2" src="../static/images/ic-health@2x.png" align="center">
+        <progress id="pgrs2" value="0" max="1"></progress>
+        <img class="ic_container img_hub" id="vector3" src="../static/images/ic-symptoms@2x.png" align="center">
+        <progress id="pgrs3" value="0" max="1"></progress>
+        <img class="ic_container img_hub" id="vector4" src="../static/images/ic-predicted@2x.png"
+             align="center">
+    </div>
+
+    <div class="container space">
+
+        <div class="row row-col-4 img_hub_text font_size">
+
+            <div class="col">
+                Demographics
+            </div>
+
+            <div class="col">
+                Pre-Health Conditions
+            </div>
+
+            <div class="col ">
+                Symptoms
+            </div>
+
+            <div class="col ">
+                Predicted Risk
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-1 col-md-1 col-lg-1"></div>
+    <div class="col-sm-10 col-md-10 col-lg-10">
+        <div class="_tab" id="tab1">
+            <div class="info_container container bg-light border rounded-lg container_text_size container_input ">
+                <div class=" shadow-lg rounded-lg ">
+                    <div class="form-row d-flex justify-content-center">
+                        <div class="form-group col-md-4 col-sm-4 col-lg-4" align="center">
+
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-lg-6 form-group dob_font ">
+                                    <div>
+                                    <label>Date Of Birth</label>
+                                    <input type="text" placeholder="select"
+                                           class="form-control col-md-12  "
+                                           onfocus="(this.type='date')"/>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6 form-group dob_font">
+                                    <label>Select Your Gender</label>
+                                    <select class="form-control col-md-12 col-sm-12 ">
+                                        <option value=" ">Select</option>
+                                        <option value=" ">Female</option>
+                                        <option value=" ">Male</option>
+                                        <option value=" ">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5 ">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <a class=" nav-link active" id="home-tab" data-mdb-toggle="tab"
+                                       href="#Imperial" role="tab" aria-controls="Imperial"
+                                       aria-selected="true">Imperial</a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" id="profile-tab" data-mdb-toggle="tab"
+                                       href="#Metric"
+                                       role="tab" aria-controls="Metric"
+                                       aria-selected="false">Metric</a>
+                                </li>
+
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="Imperial" role="tabpanel"
+                                     aria-labelledby="home-tab">
+                                    <div class="container pb-3 pt-3">
+                                        <div class="row row-cols-2 ml-3">
+                                            <div class="form-group col-sm-8  col-md-8 " align="left">
+                                                <label>Height</label>
+                                                <div class="row">
+                                                    <input type="text"
+                                                           class="  form-control text-right col-md-5 col-sm-5"
+                                                           placeholder="feet"/>
+                                                    <br>
+                                                    <input type="text"
+                                                           class="  form-control text-right col-md-5 col-sm-5"
+                                                           placeholder="Inch"/>
+                                                </div>
+                                            </div>
+                                            <div class=" col-sm-4 form-group" align="left">
+                                                <label>Weight</label>
+                                                <div class="row">
+                                                    <input type="text"
+                                                           class="  form-control text-right col-sm-9 col-md-9"
+                                                           placeholder="Pounds"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="Metric" role="tabpanel" aria-labelledby="profile-tab">
+                                    <div class="container pb-3 pt-3 pl-5 pl-sm-n5">
+                                        <div class="row row-cols-2 ">
+                                            <div class="col-md-5 col-sm-5 form-group">
+                                                <label>Height</label>
+                                                <div class="row ">
+                                                    <input type="text"
+                                                           class="form-control col-md-12 col-sm-12 mr-3   text-right"
+                                                           placeholder="Cm"/>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-5 col-sm-5 form-group" align="left">
+                                                <label>Weight</label>
+                                                <div class="row ">
+                                                    <input type="text" class="form-control ml-3 col-md-12 text-right "
+                                                           placeholder="Kg"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group col-sm-2 mt-5 ml-5 somke_margin ">
+                            <div class="container space_top">
+                                <div class="row row-cols-2 somke_font"> Do you smoke?
+
+                                    <div class="btn-group" data-toggle="buttons">
+                                        <label class="btn btn-primary rounded form-check-label">
+                                            <input type="radio" name="smoke" style="display: none;"
+                                                   class="  form-check-input">Yes
+                                        </label>
+                                        <label class="btn btn-primary rounded form-check-label">
+                                            <input type="radio" name="smoke" style="display: none;"
+                                                   class="  form-check-input">No
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div align="right" class="mt-0">
+                <button type="button" class="btn btn-light mt-3 align-right nxtbtn"
+                        onclick="next(2)">
+                    Next
+                </button>
+            </div>
+
+        </div>
+
+        <!-- metric section -->
+
+        <div class="_tab" id="tab2">
+            <div class="info_container container rounded border rounded-lg">
+                <div class=" shadow-lg border bg-white " align="left">
+                    <div class="container">
+                        <div class="row" style="margin:20px 0px 20px 0px">Do you have any following health issues:</div>
+
+                        <div class="container m-auto">
+
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <input class="rectangle-chk" type="checkbox"
+                                           aria-label="Checkbox for following text input"> Diabetes
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <input class="rectangle-chk" type="checkbox"
+                                           aria-label="Checkbox for following text input"> Heart Disease
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <input class="rectangle-chk" type="checkbox"
+                                           aria-label="Checkbox for following text input"> hypertension
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label>
+                                        <input class="rectangle-chk" type="checkbox" id="other_chk"
+                                               aria-label="Checkbox for following text input"> other diseases not
+                                        mentioned</label>
+                                    <br>
+                                    <input type="text" id="othertxt" placeholder="Other Disease "
+                                           class="form-control col-sm-9 "/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div align="right" style="margin-top:0px">
+                <button type="button" class="btn btn-light mt-3  align-right " onclick="prev(1)"> Back
+                </button>
+                <button type="button" class="btn btn-light mt-3  align-right nxtbtn" onclick="next(3)">
+                    Next
+                </button>
+            </div>
+        </div>
+
+        <!-- symptoms -->
+
+
+        <div class="_tab" id="tab3">
+            <div class="info_container container border rounded-lg col-12 col-md-12">
+                <div class="bg-white shadow-lg border" align="left">
+                    <div class="container">
+                        <div class="row" style="margin:20px 0px 20px 0px"> Do you have any following health issues:
+                        </div>
+
+                        <div class="row col-12 col-md-12">
+
+                            <div class="col-md-3">
+                                <input type="checkbox" aria-label="Checkbox for following text input"> Fever(99.5 F|37.5
+                                and
+                                above)
+                            </div>
+                            <div class="col-md-3">
+                                <input type="checkbox" aria-label="Checkbox for following text input"> Cough
+                            </div>
+                            <div class="col-md-3">
+                                <input type="checkbox" aria-label="Checkbox for following text input"> Shortness of
+                                Breath
+                            </div>
+                            <div class="col-md-3">
+                                <input type="checkbox" aria-label="Checkbox for following text input"> Sore Throat
+                            </div>
+                        </div>
+                        <div class="row col-12 col-md-12">
+
+                            <div class="col-md-3">
+                                <input type="checkbox" aria-label="Checkbox for following text input"> Muscular Pain
+                            </div>
+                            <div class="col-md-3">
+                                <input type="checkbox" aria-label="Checkbox for following text input"> Fatigue
+                            </div>
+                            <div class="col-md-3">
+                                <input type="checkbox" aria-label="Checkbox for following text input"> Headache
+                            </div>
+                            <div class="col-md-3">
+                                <input type="checkbox" aria-label="Checkbox for following text input"> Loss of Appetite
+                            </div>
+
+                        </div>
+                        <div class="row col-12 col-md-12">
+
+                            <div class="col-md-3">
+                                <input type="checkbox" aria-label="Checkbox for following text input"> Nausea
+                            </div>
+                            <div class="col-md-3">
+                                <input type="checkbox" aria-label="Checkbox for following text input"> Diarrhea
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div align="right" style="margin-top:0px">
+                <button type="button" class="btn btn-light mt-3 align-right " onclick="prev(2)"> Back
+                </button>
+                <button type="button" class="btn btn-light mt-3  align-right nxtbtn" onclick="next(4)">
+                    Next
+                </button>
+            </div>
+        </div>
+
+
+        <!-- predicted risk -->
+
+        <div class="_tab" id="tab4">
+            <div class="info_container container  border rounded-lg" align="center">
+                <div class="shadow-lg border bg-white">
+                    <h6 class="">Your Risk Score is</h6><br>
+
+
+                    <h1 class="pt-0">95.20</h1>
+                    <div class="progress" style="height: 10%; width:50%">
+                        <div class="progress-bar" style="width:10%;    background: green;">
+
+                        </div>
+                        <div class="progress-bar "
+                             style="width:10%;background: linear-gradient(45deg, green, #ffcf00);">
+
+                        </div>
+                        <div class="progress-bar " style="width:10%;    background: linear-gradient( 352deg,
+                                 #02ea02, #ffcf00);">
+
+                        </div>
+                        <div class="progress-bar " style="width:10%;    background: linear-gradient(
+                            73deg
+                             , #85ea08, #ffcf00);">
+
+                        </div>
+                        <div class="progress-bar " style="width:10%;    background: linear-gradient(
+                            73deg
+                             , #ffc107, #ffc107);">
+
+                        </div>
+                        <div class="progress-bar " style="width:10%;background: linear-gradient(
+                            73deg
+                             , #ffc107, #fc9c00);">
+
+                        </div>
+                        <div class="progress-bar " style="width:10%;    background: linear-gradient(
+                            73deg
+                             , #ff8907, #fc9000);">
+
+                        </div>
+                        <div class="progress-bar " style="width:10%;background: linear-gradient(
+                            73deg
+                             , #ff8907, #fc6100)">
+
+                        </div>
+                        <div class="progress-bar " style="width:10%;background: linear-gradient(
+                            73deg
+                             , #ff0707, #ff0000);">
+
+                        </div>
+
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <p class="pl-5" align="left">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Deleniti earum
+                                impedit
+                                iure mollitia, odit perspiciatis reprehenderit sint? Aliquam assumenda deserunt hic
+                                impedit,
+                                quam qui reiciendis rem repellendus sunt, ut voluptas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div align="right">
+                <button type="button" class="btn btn-light mt-3  align-right" onclick="prev(3)">Back
+                </button>
+                <button type="button" class="btn btn-light mt-3  align-right nxtbtn" onclick=""> Done
+                </button>
+            </div>
+            <div class="mb-5" align="center">
+                <button type="button" class="btn btn-outline-primary mt-3 btn-md btn-sm bg-blue btn_new_pre"
+                        onclick="next()">New
+                    Prediction
+                </button>
+                <button type="button" class="btn btn-primary ml-4 mt-3 btn-md btn-sm" onclick="next('tab5')">Share
+                    Result
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-1"></div>
+
+</div>
+
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+<script>
+                $("._tab").hide();
+                $("#tab1").show();
+                $("#othertxt").hide();
+                //  $("#vector1 ").attr('src', 'static/images/check.jpg');
+                var vector = ['ic-demographics@2x.png', 'ic-health@2x.png', 'ic-symptoms@2x.png', 'ic-predicted@2x.png'];
+                var vector_on = ['ic-demographics-on@2x.png', 'ic-health-on@2x.png', 'ic-symptoms-on@2x.png', 'ic-predicted-on@2x.png'];
+
+                function update_basic_images() {
+                    for (let x = 1; x <= vector.length; x++) {
+                        $("#vector" + x).attr('src', 'static/images/' + vector[x - 1]);
+
+                    }
+                }
+
+                function next(params) {
+                    $("._tab").hide();
+                    //$(".thumbs").children('img:nth-child(' + params + ')').attr('src ', '../static/images / ' + vector_on[params - 1]);
+                    //  alert(vector_on[params - 1])
+                    $("#pgrs" + (params - 1)).val(1);
+                    //   update_basic_images();
+                    $("#vector" + params).attr('src', '../static/images/' + vector_on[params - 1]);
+                    $("#tab" + params).show();
+                }
+
+                function prev(params) {
+                    $("._tab").hide();
+                    //   $(".thumbs").children('img:nth-child(' + params + ')').attr('src', '../static/images/' + vector[params - 1]);
+                    //  update_basic_images();
+                    $("#vector" + (params + 1)).attr('src', '../static/images/' + vector[params]);
+                    $("#pgrs" + (params)).val(0);
+                    $("#tab" + params).show();
+                }
+                $('#other_chk').change(function() {
+                    if (this.checked) {
+                        $("#othertxt ").show();
+                    } else
+                        $("#othertxt ").hide();
+                });
+
+                $(".nav-tabs a").click(function() {
+                    $(this).tab('show');
+                });
+
+
+
+
+
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+-->
+</body>
+
+</html>
